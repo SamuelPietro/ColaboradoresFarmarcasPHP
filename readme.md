@@ -15,8 +15,7 @@ Garanta de instalar o XAMPP primeiro.
 
 1. Clone o repositório para a pasta `c:/xampp/htdocs`.
 2. Em seu terminal execute os comandos abaixo
-3. Abra seu terminal dentro da pasta raiz da aplicação e execute ``
-
+3. Abra seu terminal dentro da pasta raiz da aplicação e execute os comando a seguir
 
     composer install
     npm install
@@ -32,7 +31,7 @@ Contribuições são sempre bem-vindas, sintam-se livres para solicitar novas fu
 
 ## Ferramentas
 
-- [Lavaravel]
+- [Lavaravel v9.x](https://laravel.com/)
 - [PHP v8.1.x](https://www.php.net/releases/8.1/en.php)
 - [MariaDB v10.4.24](https://mariadb.com/kb/en/mariadb-10424-release-notes/)
 - [Tailwind CSS v3.0.19](https://tailwindcss.com/)
