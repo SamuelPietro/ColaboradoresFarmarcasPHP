@@ -6,22 +6,34 @@ use App\Http\Controllers\Controller;
 use App\Http\Resources\Colaborador as ColaboradorResource;
 use App\Models\Colaborador as Colaborador;
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class ColaboradorController extends Controller
 {
 
+    /**
+     * @return AnonymousResourceCollection
+     */
     public function index()
     {
         $colaboradores = Colaborador::paginate(15);
         return ColaboradorResource::collection($colaboradores);
     }
 
+    /**
+     * @param $id
+     * @return ColaboradorResource
+     */
     public function show($id)
     {
         $colaborador = Colaborador::findOrFail($id);
         return new ColaboradorResource($colaborador);
     }
 
+    /**
+     * @param Request $request
+     * @return ColaboradorResource|void
+     */
     public function store(Request $request)
     {
         $colaborador = new Colaborador;
@@ -45,6 +57,10 @@ class ColaboradorController extends Controller
         }
     }
 
+    /**
+     * @param Request $request
+     * @return ColaboradorResource|void
+     */
     public function update(Request $request)
     {
         $colaborador = Colaborador::findOrFail($request->id);
@@ -68,6 +84,10 @@ class ColaboradorController extends Controller
         }
     }
 
+    /**
+     * @param $id
+     * @return ColaboradorResource|void
+     */
     public function destroy($id)
     {
         $colaborador = Colaborador::findOrFail($id);
