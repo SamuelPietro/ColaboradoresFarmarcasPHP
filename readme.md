@@ -25,7 +25,7 @@ $ cd ColaboradoresFarmarcasPHP
 # Instale as dependências do node.js
 $ npm install
 
-# Instale as dependências do composer.js e gere o autoloader
+# Instale as dependências do composer e gere o autoloader
 $ composer install
 
 # Crie um banco de dados
