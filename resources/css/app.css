@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html {
+    @apply scroll-smooth min-h-screen
+}
+
+body {
+    @apply m-0 antialiased bg-blue-50
+}
+
+aside {
+    @apply
+    lg:fixed
+    lg:left-0
+    lg:h-screen
+    top-0
+    flex
+    lg:mt-16
+    flex-col
+    content-center
+}
+main {
+    @apply
+    flex-1
+    p-4
+    lg:p-8
+}
+.content {
+    @apply bg-white rounded-xl lg:px-8 p-4 shadow-2xl pb-6
+}
+
+.navbar {
+    @apply
+    flex
+    justify-between
+    items-center
+    bg-gradient-dark-gray
+    p-4
+    h-16
+}
+
+.nav {
+    @apply
+    w-full
+    hidden
+    lg:block
+    lg:h-screen
+    lg:w-64
+    p-4
+    bg-gradient-dark-gray
+}
+
+.logo {
+    @apply flex gap-4 items-center w-56
+}
+
+.menu {
+    @apply
+    w-full
+    px-4
+    py-2
+    mt-3
+    rounded-lg
+    hover:bg-orange-600
+    flex
+    z-20
+}
+
+.icon-menu {
+    @apply
+    text-white
+    rounded
+    h-8
+    w-8
+    text-xl
+    flex
+    justify-center
+}
+
+.text-menu {
+    @apply
+    font-semibold
+    text-xl
+    text-white
+    ml-2
+}
+
+.content-title {
+    @apply pb-6 pt-6 bg-white border-b-0 rounded-t-2xl font-extralight text-xl flex justify-between
+}
+
+section {
+    @apply mb-16
+}
+
+label {
+    @apply mb-2 ml-1 font-bold text-slate-700
+}
+
+input {
+    @apply
+    w-full
+    rounded-lg
+    border
+    border-gray-400
+    bg-white
+    px-3
+    py-2
+    font-normal
+    text-gray-700
+    focus:border-orange-600
+    focus:outline-none
+    focus:transition-shadow
+}
+
+select {
+    @apply
+    w-full
+    rounded-lg
+    border
+    border-gray-400
+    bg-white
+    px-3
+    py-2
+    font-normal
+    text-gray-700
+    focus:border-orange-600
+    focus:outline-none
+    focus:transition-shadow
+}
+
+textarea {
+    @apply
+    w-full
+    rounded-lg
+    border
+    border-gray-400
+    bg-white
+    px-3
+    py-2
+    font-normal
+    text-gray-700
+    focus:border-orange-600
+    focus:outline-none
+    focus:transition-shadow
+}
+
+.btn {
+    @apply
+    px-6 py-3 mb-0 font-semibold text-center text-white uppercase align-middle
+    border-0 rounded-lg cursor-pointer
+    active:opacity-80 bg-orange-600 hover:bg-orange-700
+}
+.btn-danger {
+    @apply
+    px-6 py-3 mb-0 font-semibold text-center text-white uppercase align-middle
+    border-0 rounded-lg cursor-pointer
+    active:opacity-80 bg-gradient-red hover:bg-red-900
+}
+
+.btn-incluir {
+    @apply
+    px-4 py-2 mb-0 font-semibold text-center text-orange-600 align-middle
+    border-0 rounded-lg cursor-pointer border-2 border-orange-600
+    hover:text-white hover:bg-orange-600
+}
+
+hr {
+    @apply h-px mt-0 bg-transparent
+}
+
+footer {
+    @apply py-3 mx-auto mt-4 text-center text-slate-900 flex-none
+}
+
+h1 {
+    @apply font-extrabold text-4xl text-transparent bg-gradient-orange bg-clip-text
+}
+
+h2 {
+    @apply font-extrabold text-3xl text-transparent bg-orange-600 bg-clip-text
+}
+h3 {
+    @apply font-medium text-lg
+}
+
+.table-title {
+    @apply
+    py-3
+    pl-2
+    text-start
+    font-bold
+    uppercase
+    border-b
+    text-slate-400
+}
+
+.table-content {
+    @apply p-2
+    bg-transparent
+    border-b-2
+}
+
+.form-group {
+    @apply
+    mt-4
+    w-full
+}
+
+.alert-danger{
+    @apply bg-red-200 text-red-700 border-red-500 border p-4 rounded
+}
+.alert-success{
+    @apply bg-green-200 text-green-700 border-green-500 border p-4 rounded
+}
+.alert-warning{
+    @apply bg-yellow-200 text-yellow-700 border-yellow-500 border p-4 rounded
+}
+.alert-info {
+    @apply bg-blue-200 text-blue-700 border-blue-500 border p-4 rounded
+}
+
+
