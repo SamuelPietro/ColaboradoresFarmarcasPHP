@@ -1,35 +1,64 @@
 # Colaboradores Farmarcas PHP
-![](https://img.shields.io/github/stars/SamuelPietro/ColaboradoresFarmarcasPHP) ![](https://img.shields.io/github/forks/SamuelPietro/ColaboradoresFarmarcasPHP) ![](https://img.shields.io/github/languages/top/SamuelPietro/ColaboradoresFarmarcasPHP) ![](https://img.shields.io/github/release/SamuelPietro/ColaboradoresFarmarcasPHP) ![](https://img.shields.io/github/issues/SamuelPietro/ColaboradoresFarmarcasPHP) ![](https://img.shields.io/github/repo-size/SamuelPietro/ColaboradoresFarmarcasPHP)
+Aplicação para gerenciar colaboradores.
 
-Colaboradores é uma aplicação desenvolvida por Samuel Pietro para gerenciar colaboradores.
+![Badge](https://img.shields.io/github/stars/SamuelPietro/ColaboradoresFarmarcasPHP) ![Badge](https://img.shields.io/github/forks/SamuelPietro/ColaboradoresFarmarcasPHP) ![Badge](https://img.shields.io/github/languages/top/SamuelPietro/ColaboradoresFarmarcasPHP) ![Badge](https://img.shields.io/github/release/SamuelPietro/ColaboradoresFarmarcasPHP) ![Badge](https://img.shields.io/github/issues/SamuelPietro/ColaboradoresFarmarcasPHP) ![Badge](https://img.shields.io/github/repo-size/SamuelPietro/ColaboradoresFarmarcasPHP)
+
 
 ## Requisitos
-Para usar a aplicação em sua maquina local é necessário possuir as aplicações abaixo instaladas.
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 Garanta de instalar o XAMPP primeiro.
 * [XAMPP v8.1.6](https://www.apachefriends.org/download.html)
 * [NODE.JS](https://nodejs.org/en/download/)
 * [COMPOSER](https://getcomposer.org/download/)
 
 
+
 ## Instalação
 
-1. Clone o repositório para a pasta `c:/xampp/htdocs`.
-2. Em seu terminal execute os comandos abaixo
-3. Abra seu terminal dentro da pasta raiz da aplicação e execute os comando a seguir
+```bash
+# Clone este repositório
+$ git clone <https://github.com/SamuelPietro/ColaboradoresFarmarcasPHP>
 
-    composer install
-    npm install
-    php artisan migrate
-    php artisan serve
+# Acesse a pasta do projeto no terminal/cmd
+$ cd ColaboradoresFarmarcasPHP
+
+# Instale as dependências do node.js
+$ npm install
+
+# Instale as dependências do composer.js e gere o autoloader
+$ composer install
+
+# Crie um banco de dados
+# Configure o arquivo .env com os dados de acesso ao seu banco de dados
+
+#Execute a migração das tabelas
+$ php artisan migrate
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm run dev
+
+# Inicie o servidor local
+$ php artisan server
+
+# O servidor inciará na porta:8000 - acesse <http://localhost:8000>
+```
+
+## API
+Esta aplicação conta com um conjunto de rotas iniciadas com '/api' que retorna payloads json com base na rota.
+As rotas ativas nesse momento são:
 
 
-**Agora basta acessar a aplicação em seu navegador usando `localhost:8000`**
+```
+GET http://localhost:8000/api/colaboradores (retorna todos os colaboradores)
+GET http://localhost:8000/api/colaborador/1 (retorna o colaborador com PK=1)
+POST http://localhost:8000/api/colaborador (cria um novo colaborador)
+PUT http://localhost:8000/api/colaborador/1 (atualiza o colaborador com PK=1)
+DELETE http://localhost:8000/api/colaborador/1 (exclui o colaborador com PK=1)
+```
 
-## Contribuir
-Contribuições são sempre bem-vindas, sintam-se livres para solicitar novas funcionalidades e correções de bugs.
 
-
-## Ferramentas
+## 🛠 Tecnologias
+As seguintes ferramentas foram usadas na construção do projeto:
 
 - [Lavaravel v9.x](https://laravel.com/)
 - [PHP v8.1.x](https://www.php.net/releases/8.1/en.php)
@@ -38,3 +67,8 @@ Contribuições são sempre bem-vindas, sintam-se livres para solicitar novas fu
 - [Jquery v3.6.0](https://blog.jquery.com/2021/03/02/jquery-3-6-0-released/)
 - [jQuery Mask Plugin v1.14.16](https://igorescobar.github.io/jQuery-Mask-Plugin/)
 - [Bootstrap Icons v1.8.0](https://icons.getbootstrap.com/)
+
+
+
+## Contribuir
+Contribuições são sempre bem-vindas, sintam-se livres para criar e/ou solicitar novas funcionalidades e correções de bugs.
