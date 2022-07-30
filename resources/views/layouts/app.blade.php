@@ -17,7 +17,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Styles -->
-    <link href="{{ asset('build/assets/app.css') }}" rel="stylesheet">
+    @vite('resources/css\app.css')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"/>
 
     <!-- Scripts -->
