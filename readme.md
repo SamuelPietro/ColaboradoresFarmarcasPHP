@@ -61,20 +61,28 @@ $ ren .env.example .env
 # Execute a migração das tabelas
 $ php artisan migrate
 
-# Execute a aplicação em modo de desenvolvimento
-$ npm run build
-
-# Abra outra tela do CMD sem fechar a anterior e vá para a pasta da aplicação
-$ cd \xampp\htdocs\ColaboradoresFarmarcasPHP
+# Gere sua chave de criptografia de aplicativo
+$ php artisan key:generate
 
 # Inicie o servidor local
 $ php artisan serve
+```
+Mantendo o terminal aberto seu servidor estará pronto na porta:8000
+Acesse http://localhost:8000 para executar a aplicação.
 
-# O servidor inciará na porta:8000 - acesse <http://localhost:8000>
+### Desenvolvimento
+Para usar a aplicação em modo de desenvolvimento além dos comandos de instalação acima execute os seguintes comandos.
+ATENÇÃO: Não feche nenhuma das duas janelas do terminal durante o desenvolvimento. 
+```bash
+# Em outra instância do terminal vá para a raiz da aplicação
+$ cd \xampp\htdocs\ColaboradoresFarmarcasPHP
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm run dev
 ```
 
 ## API
-Esta aplicação conta com um conjunto de rotas iniciadas com '/api' que retorna payloads json com base na rota.
+Esta aplicação conta com um conjunto de rotas iniciadas com '/api' que retornam payloads json com base na rota.
 As rotas ativas nesse momento são:
 
 
