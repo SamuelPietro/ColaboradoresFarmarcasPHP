@@ -8,16 +8,24 @@ Aplicação para gerenciar colaboradores.
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 Garanta de instalar o XAMPP primeiro.
 * [XAMPP v8.1.6](https://www.apachefriends.org/download.html)
+* [GIT](https://git-scm.com/downloads)
 * [NODE.JS](https://nodejs.org/en/download/)
 * [COMPOSER](https://getcomposer.org/download/)
 
 
 
 ## Instalação
+Todo o processo de instalação é feito usando terminal!
+
+ATENÇÂO: Recomendamos o uso do prompt de comando (CMD) pois o Power Shell não consegue executar 
+corretamente todos os passos da instalação.
 
 ```bash
+# Abra o seu terminal (CMD) e acesse a pasta raiz do servidor
+$ cd \xampp\htdocs
+
 # Clone este repositório
-$ git clone <https://github.com/SamuelPietro/ColaboradoresFarmarcasPHP>
+$ git clone https://github.com/SamuelPietro/ColaboradoresFarmarcasPHP.git
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd ColaboradoresFarmarcasPHP
@@ -28,17 +36,39 @@ $ npm install
 # Instale as dependências do composer e gere o autoloader
 $ composer install
 
-# Crie um banco de dados
-# Configure o arquivo .env com os dados de acesso ao seu banco de dados
+# Inicie os módulos Apache e MySQL no XAMPP
+$ \xampp\xampp-control.exe
+# Com o xampp-control aberto, clique no botão “Start” que fica ao lado de “MySQL” e “Apache”.
+# Vai aparecer um “Running” do lado do botão, indicando que os serviços estão rodando nas respectivas portas.
 
-#Execute a migração das tabelas
+# Conecte ao servidor MySQL
+$ cd \xampp\mysql\bin
+$ mysql -h localhost -u root
+
+# Crie um banco de dados com o comando “create database”.
+$ create database farmarcas;
+
+# Encerre a conexão com o MySQL
+$ exit
+
+# Retorne para a pasta da aplicação
+$ cd \xampp\htdocs\ColaboradoresFarmarcasPHP
+
+# Configure o arquivo .env com os dados de acesso ao seu banco de dados
+$ ren .env.example .env
+# Caso tenha usado algum parâmetro personalizado durante a instalação pode ser necessário informa-los no arquivo .env
+ 
+# Execute a migração das tabelas
 $ php artisan migrate
 
 # Execute a aplicação em modo de desenvolvimento
-$ npm run dev
+$ npm run build
+
+# Abra outra tela do CMD sem fechar a anterior e vá para a pasta da aplicação
+$ cd \xampp\htdocs\ColaboradoresFarmarcasPHP
 
 # Inicie o servidor local
-$ php artisan server
+$ php artisan serve
 
 # O servidor inciará na porta:8000 - acesse <http://localhost:8000>
 ```
