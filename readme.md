@@ -17,7 +17,7 @@ Garanta de instalar o XAMPP primeiro.
 ## Instalação
 Todo o processo de instalação é feito usando terminal!
 
-ATENÇÂO: Recomendamos o uso do prompt de comando (CMD) pois o Power Shell não consegue executar 
+ATENÇÂO: Recomendamos o uso do prompt de comando (CMD) pois o Power Shell não consegue executar
 corretamente todos os passos da instalação.
 
 ```bash
@@ -64,25 +64,21 @@ $ php artisan migrate
 # Gere sua chave de criptografia de aplicativo
 $ php artisan key:generate
 
+# Execute a aplicação em modo de desenvolvimento
+$ npm run build
+
+# Abra outra tela do CMD sem fechar a anterior e vá para a pasta da aplicação
+$ cd \xampp\htdocs\ColaboradoresFarmarcasPHP
+>>>>>>> parent of 90b8abb (new instructions for development mode.)
+
 # Inicie o servidor local
 $ php artisan serve
-```
-Mantendo o terminal aberto seu servidor estará pronto na porta:8000
-Acesse http://localhost:8000 para executar a aplicação.
 
-### Desenvolvimento
-Para usar a aplicação em modo de desenvolvimento além dos comandos de instalação acima execute os seguintes comandos.
-ATENÇÃO: Não feche nenhuma das duas janelas do terminal durante o desenvolvimento. 
-```bash
-# Em outra instância do terminal vá para a raiz da aplicação
-$ cd \xampp\htdocs\ColaboradoresFarmarcasPHP
-
-# Execute a aplicação em modo de desenvolvimento
-$ npm run dev
+# O servidor inciará na porta:8000 - acesse <http://localhost:8000>
 ```
 
 ## API
-Esta aplicação conta com um conjunto de rotas iniciadas com '/api' que retornam payloads json com base na rota.
+Esta aplicação conta com um conjunto de rotas iniciadas com '/api' que retorna payloads json com base na rota.
 As rotas ativas nesse momento são:
 
 
@@ -94,7 +90,6 @@ PUT http://localhost:8000/api/colaborador/1 (atualiza o colaborador com PK=1)
 DELETE http://localhost:8000/api/colaborador/1 (exclui o colaborador com PK=1)
 ```
 
-
 ## 🛠 Tecnologias
 As seguintes ferramentas foram usadas na construção do projeto:
 
@@ -105,7 +100,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [Jquery v3.6.0](https://blog.jquery.com/2021/03/02/jquery-3-6-0-released/)
 - [jQuery Mask Plugin v1.14.16](https://igorescobar.github.io/jQuery-Mask-Plugin/)
 - [Bootstrap Icons v1.8.0](https://icons.getbootstrap.com/)
-
 
 
 ## Contribuir
