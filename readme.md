@@ -17,7 +17,7 @@ Garanta de instalar o XAMPP primeiro.
 ## Instalação
 Todo o processo de instalação é feito usando terminal!
 
-ATENÇÂO: Recomendamos o uso do prompt de comando (CMD) pois o Power Shell não consegue executar
+ATENÇÃO: Recomendamos o uso do prompt de comando (CMD) pois o Power Shell não consegue executar
 corretamente todos os passos da instalação.
 
 ```bash
@@ -69,7 +69,6 @@ $ npm run build
 
 # Abra outra tela do CMD sem fechar a anterior e vá para a pasta da aplicação
 $ cd \xampp\htdocs\ColaboradoresFarmarcasPHP
->>>>>>> parent of 90b8abb (new instructions for development mode.)
 
 # Inicie o servidor local
 $ php artisan serve
